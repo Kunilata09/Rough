@@ -18,9 +18,8 @@ We have an end to end framework which could be utilized to automatically extract
     <li>
         <a href>Data</a>
     </li>
-    <li><a href>Object Detection Algorithm</a></li>
-    <li><a href>Image Segmentation Algorithm</a></li>
-    <li><a href>One-shot learning</a></li>
+    <li><a href>Methodology</a></li>
+    <li><a href>Example</a></li>
     <li><a href >End to End pipeline</a></li>
     <!-- <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li> -->
@@ -32,7 +31,7 @@ We have an end to end framework which could be utilized to automatically extract
 ## Work Flow
 The below image shows the end to end pipeline of the trend identification framework:
 
-![overview image](https://user-images.githubusercontent.com/102578442/209826489-ec80d345-be8a-46bc-9136-19499c12d48c.png)
+![overview image](https://github.com/Kunilata09/Rough/blob/main/Screenshot%20(670).png)
 
 
 
@@ -43,7 +42,7 @@ The below image shows the end to end pipeline of the trend identification framew
 The image data for this work is collected from the GAP webpage , which is publicly avaialable .
 
 
-![Data Scrapping](https://user-images.githubusercontent.com/102578442/209826434-cda8f8f1-bad7-484a-853d-e1ef1d2a4e92.png)
+![Data Scrapping])
 
 
 ## Methodology
@@ -68,7 +67,7 @@ The goal of this project is to automate the extraction of various attributes fro
 
 
 
-![Object Detection](https://user-images.githubusercontent.com/102578442/209826531-942438c8-ab02-46e3-819a-29affe95ebe0.png)
+![]()
 
 
 
