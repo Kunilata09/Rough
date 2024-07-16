@@ -29,7 +29,7 @@ We have an end to end framework which could be utilized to automatically extract
 
 <a name="readme-top"></a>
 ## Work Flow
-The below image shows the end to end pipeline of the trend identification framework:
+The below image shows the end to end architecture of the BLIP  framework:
 
 ![overview image](https://github.com/Kunilata09/Rough/blob/main/Screenshot%20(670).png)
 
@@ -67,7 +67,7 @@ The goal of this project is to automate the extraction of various attributes fro
 
 
 
-![]()
+![](https://github.com/Kunilata09/Rough/blob/main/Screenshot%202024-07-16%20163827.png)
 
 
 
