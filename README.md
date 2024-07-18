@@ -6,10 +6,8 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href>Introduction</a></li>
-    <li><a href>What we have?</a></li>
-    <li>
-        <a href>Solution Architecture</a>
+    <li><a href>Introduction</a></li> 
+       <li><a href>Solution Architecture</a>
     </li>
     <li><a href>Models</a></li>
     <li><a href>Example</a></li>
@@ -26,9 +24,6 @@ Automated extraction of product attributes from images enhances product catalogi
 
 Using AI for attribute extraction allows companies to produce detailed and accurate product listings that better connect with consumers. By transforming plain product images into detailed descriptions, businesses can improve engagement and convey value more effectively, driving higher conversion rates and providing a competitive edge in the digital marketplace.
 
-## What we have?
-We have an end to end framework which could be utilized to automatically extract attributes from images using a predefined configuration.The available code is developed to  allows users to upload an image of a product and select the attributes they want to extract based on some particular categories, but similar approach could be followed to extract attributes for different products. 
-
 
 
 
@@ -39,30 +34,44 @@ We have an end to end framework which could be utilized to automatically extract
 ### Solution Diagram
 An overview of the proposed framework:
 
-![overview image](https://github.com/Kunilata09/Rough/blob/main/ARC_DIA.png)
+![overview image](https://github.com/Kunilata09/Rough/blob/main/MY_DOC1%20(4).png) 
 
-
+The above framework can be extended to accommodate new attributes. Since the BLIP model expects inputs in the form of images and questions, relevant questions need to be created for any new attributes. The flow below demonstrates how questions are created and passed into the model to obtain attribute values:
+![overview image](https://github.com/Kunilata09/Rough/blob/main/MY_DOC1%20(5).png) 
 
 
 
 
 ### Architecture Overview
 
-The goal of this project is to automate the extraction of various attributes from product images using a Vision Question Answering model. Given an image and a set of predefined questions, the BLIP VQA model analyzes the image and provides answers, facilitating the understanding and cataloging of product attributes.The complete process follows the below steps
+The goal of this project is to automate the extraction of various attributes from product images using a Vision Question Answering (VQA) model. Given an image and a set of predefined questions, the BLIP VQA model analyzes the image and provides answers, facilitating the understanding and cataloging of product attributes.
+
+The complete process follows the below steps
 
 
 - Collect Input Images :
-   Gather all images that we need to extract attributes automatically.
+   Gather all images from which we need to extract attributes automatically.
+
+- Initialization: Initialize and configure the BlipProcessor, BlipForQuestionAnswering, and BlipForConditionalGeneration to prepare for processing images, answering questions, and creating short descriptions of the images.
+- Loading and Processing : Load the input image and pass it to BlipForConditionalGeneration to get a short description of the image.
 - Load Configuration :Use a configuration file (e.g., JSON or YAML) that maps attributes to corresponding questions. This configuration should be thoroughly tested and validated against ground truth data to ensure accuracy. Hence under each attribute , we are having a relevent question.
-- Category Selection :  Select relevant attributes based on the image that are predefined in config .
+- Handling New Attributes: For new attributes that are not defined in the uploaded JSON, OpenAI GPT-3.5 is used along with a prompt template and a short description from the BlipForConditionalGeneration model to generate relevant questions for each new attribute. This allows the model to handle previously undefined attributes and obtain their values.
+- Attribute Selection :  Select relevant attributes we want to extract the values .Once we select the attributes we can get the corresponding questions.
 
       For example-
       Quantities: How many products are there?
       Colour: What are the colors present in the image?
 
-- Model :Initialize and configure the BLIP Processor, BLIPForQuestionAnswering and BlipForConditionalGeneration to prepare for processing images and answering questions and creating short desription for the image.
-- Using OpenAI's GPT-3.5 Turbo, generate a complete description for the image by providing the short description as input.
+- Model Execution :Initialize and configure the BlipProcessor and BlipForQuestionAnswering model to get the answers to the questions. We need to pass the input image and the corresponding questions for each attribute, and we will get the output as Attributes: Values.
+- Using OpenAI's GPT-3.5 Turbo, generate a complete description for the image by providing the short description and prompt as input.
 - Final output will be in the format, Attribute: Value and Description.
+
+## Model
+The following predefined components and models are used for the complete work:
+
+- BlipProcessor : BlipProcessor is used for preparing the input image.
+- BlipForQuestionAnswering: This is know as BLIP VQA(Visual Question Answer) model,  used to get the answers(attribute value) for a set of questions based on the image.
+- BlipForConditionalGeneration: This is the BLIP image captioning model, used to get the descriptive caption from the image .
 
 
 <div id="top"></div>
