@@ -1,8 +1,27 @@
 
 
 # Attribute Value Extraction
-Attribute Value Extraction is the task of extracting values for a given set of attributes of interest from free text input. Attribute value extraction is for example applied in the context of e-commerce where product attribute values are extracted from product offers.
+<a name="readme-top"></a>
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href>Introduction</a></li>
+    <li>
+        <a href>Solution Architecture</a>
+    </li>
+    <li><a href>Models</a></li>
+    <li><a href>Example</a></li>
+    <li><a href >End to End pipeline</a></li>
+    <!-- <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li> -->
+  </ol>
+</details>
+
+# Introduction
+Attribute extraction from image is a task that involves using visual concepts to map the probabilities of commonly used word.Automatically extracting attributes from the image is an epoch-making task because it needs to precisely predict not just the objects but also their attributes and activities are involved in making the scene. It can be used in many areas, for example applied in the context of e-commerce where product attribute values are extracted from product offers.
 Automated extraction of product attributes from images enhances product cataloging by providing detailed and accurate descriptions. Traditionally a manual process, AI now automates this, analyzing images and extracting relevant attributes, such as color, material, and logos and more.This technology saves time and resources while ensuring high-quality, consistent product information across platforms.
+
 
 Using AI for attribute extraction allows companies to produce detailed and accurate product listings that better connect with consumers. By transforming plain product images into detailed descriptions, businesses can improve engagement and convey value more effectively, driving higher conversion rates and providing a competitive edge in the digital marketplace.
 
@@ -11,45 +30,27 @@ We have an end to end framework which could be utilized to automatically extract
 
 
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href>Work Flow</a></li>
-    <li>
-        <a href>Data</a>
-    </li>
-    <li><a href>Methodology</a></li>
-    <li><a href>Example</a></li>
-    <li><a href >End to End pipeline</a></li>
-    <!-- <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li> -->
-  </ol>
-</details>
-
-
-<a name="readme-top"></a>
-## Work Flow
-The below image shows the end to end architecture of the BLIP  framework:
-
-![overview image](https://github.com/Kunilata09/Rough/blob/main/Screenshot%20(670).png)
 
 
 
+# Solution Architecture
 
+### Solution Diagram
+An overview of the proposed framework:
+
+![overview image](https://github.com/Kunilata09/Rough/blob/main/ARC_DIA.png)
 
 
 ##  Data
 The image data for this work is collected from the GAP webpage , which is publicly avaialable .
 
 
-![Data Scrapping])
+
+### Architecture Overview
+
+The goal of this project is to automate the extraction of various attributes from product images using a Vision Question Answering model. Given an image and a set of predefined questions, the BLIP VQA model analyzes the image and provides answers, facilitating the understanding and cataloging of product attributes.The complete process follows the below steps
 
 
-## Methodology
-
-The goal of this project is to automate the extraction of various attributes from product images using a Vision Question Answering model. Given an image and a set of predefined questions, the BLIP VQA model analyzes the image and provides answers, facilitating the understanding and cataloging of product attributes.
-
-### Step-by-Step Methodology
 - Collect Input Images :
    Gather all images that we need to extract attributes automatically.
 - Category Selection :  Manually assign a category to each image based on visual inspection. This step requires domain knowledge to accurately categorize the images.
