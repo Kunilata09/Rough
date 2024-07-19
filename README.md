@@ -38,7 +38,7 @@ An overview of the proposed framework:
 
 ![overview image](https://github.com/Kunilata09/Rough/blob/main/MY_DOC1%20(4).png) 
 
-The above framework can be extended to accommodate new attributes. Since the BLIP model expects inputs in the form of images and questions, relevant questions need to be created for any new attributes. The flow below demonstrates how questions are created and passed into the model to obtain attribute values:
+The above framework can be extended to accommodate new attributes. Since the BLIP model expects inputs in the form of images and questions, relevant questions need to be created for any new attributes. The flow below demonstrates how questions are created for any new attributes that are not predefined in the config:
 ![overview image](https://github.com/Kunilata09/Rough/blob/main/MY_DOC1%20(5).png) 
 
 
