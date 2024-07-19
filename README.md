@@ -26,6 +26,8 @@ Using AI for attribute extraction allows companies to produce detailed and accur
 
 
 
+Our pipeline leverages advanced models from the BLIP (Bootstrapping Language-Image Pretraining) suite to achieve two significant tasks: attribute extraction and descriptive text generation from images.
+
 
 
 
