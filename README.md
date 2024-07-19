@@ -68,7 +68,7 @@ The complete process follows the below steps
 - Using OpenAI's GPT-3.5 Turbo, generate a complete description for the image by providing the short description and prompt as input.
 - Final output will be in the format, Attribute: Value and Description.
 
-## Model
+## Models
 The following predefined components and models are used for the complete work:
 
 - BlipProcessor : BlipProcessor is used for preparing the input image.
